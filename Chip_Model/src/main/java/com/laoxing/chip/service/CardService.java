@@ -22,4 +22,7 @@ public interface CardService {
     R queryByPhone(String phone);
     R save(CardDto dto);
     R all();
+
+    //查询 名片对应的二维码
+    R queryQRcode(String phone);
 }

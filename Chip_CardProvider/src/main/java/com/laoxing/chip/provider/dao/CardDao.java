@@ -18,7 +18,7 @@ public interface CardDao {
     @Select("select * from t_card where phone=#{phone}")
     Card selectByPhone(String phone);
     //新增
-    @Insert("insert into t_pcard(name,email,info,phone,address,position,blogurl,ctime,flag) values(#{name},#{email},#{info},#{phone},#{address},#{position},#{blogurl},now(),1)")
+    @Insert("insert into t_card(name,email,info,phone,address,position,blogurl,ctime,flag) values(#{name},#{email},#{info},#{phone},#{address},#{position},#{blogurl},now(),1)")
     int insert(CardDto dto);
     //查询全部
     @Select("select * from t_card order by ctime desc")

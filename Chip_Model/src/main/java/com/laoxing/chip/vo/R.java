@@ -3,6 +3,8 @@ package com.laoxing.chip.vo;
 import com.laoxing.chip.resultenum.RCode;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @program: Chip_Parent
  * @description:
@@ -10,7 +12,7 @@ import lombok.Data;
  * @create: 2020-02-12 11:03
  */
 @Data
-public class R {
+public class R  implements Serializable {
     private int code;
     private String msg;
     private Object data;
@@ -30,7 +32,7 @@ public class R {
         return setR(true,"OK",obj);
     }
     public static R fail(){
-        return setR(true,"ERROR",null);
+        return setR(false,"ERROR",null);
     }
 
 }

@@ -2,6 +2,8 @@ package com.laoxing.chip.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @program: Chip_Parent
  * @description:
@@ -9,7 +11,7 @@ import lombok.Data;
  * @create: 2020-02-12 11:01
  */
 @Data
-public class CardDto {
+public class CardDto implements Serializable {
     private String name;
     private String info;
     private String phone;
@@ -17,4 +19,5 @@ public class CardDto {
     private String address;
     private String blogurl;
     private String position;
+
 }
